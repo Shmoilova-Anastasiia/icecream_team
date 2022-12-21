@@ -15,6 +15,7 @@
     }
 }
 .product__label{
+    margin-bottom: 12px;
 font-weight: 800;
 font-size: 18px;
 line-height: calc(22/18);
@@ -31,6 +32,8 @@ line-height: calc(37/30);
     }
 }
 .product__title{
+    margin-bottom: 40px;
+
     font-family: 'Seymour One';
 font-size: 30px;
 line-height: calc(38/30);
@@ -39,20 +42,57 @@ letter-spacing: 0.04em;
 text-transform: uppercase;
 color: #131313;
 @media screen and (min-width:768px){
+    margin-bottom: 80px;
+
        font-size: 34px;
 line-height: calc(43/34);
     }
     @media screen and (min-width:1200px){
+        margin-bottom: 120px;
+
        font-size: 36px;
 line-height: calc(45/36);
     }
 }
 .product__list{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    @media screen and (min-width:768px){
+        gap: 16px;
+    }
+    @media screen and (min-width:1200px){
+        gap: 29px;
+    }
 
 }
+.product__item{
+   max-width: 280px;
+   padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+   @media screen and (min-width:768px){
+        max-width: 224px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    @media screen and (min-width:1200px){
+        max-width: 370px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+}
 .product__item-green{
+    position: relative;
     background-color: #AEC6A5;
+}
+.product__item-green::before{
+    content: ' ';
+    background-image: url(../../image/products/icelg@1x.jpg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .product__item-yellow{
     background-color:#EFD478;
@@ -61,6 +101,9 @@ line-height: calc(45/36);
     background-color:#D6936D;
 }
 .product__undertitle{
+margin-top: 123px;
+margin-bottom: 40px;
+
     font-weight: 700;
 font-size: 20px;
 line-height: calc(24/20);
@@ -69,11 +112,29 @@ letter-spacing: 0.04em;
 text-transform: uppercase;
 color: #131313;
 @media screen and (min-width:768px){
+    margin-top: 108px;
+    
+
        font-size: 22px;
 line-height: calc(27/22);
     }
     @media screen and (min-width:1200px){
+        margin-top: 165px;
+        margin-bottom: 66px;
+
        font-size: 30px;
 line-height: calc(37/30);
     }
+}
+.product__text{
+    font-size: 14px;
+line-height: calc(28/16);
+text-align: center;
+letter-spacing: 0.04em;
+color: #131313;
+@media screen and (min-width:1200px){
+margin-bottom: 50px;
+
+    font-size: 16px;
+}
 }
